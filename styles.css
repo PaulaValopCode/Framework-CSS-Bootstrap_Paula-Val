@@ -1,0 +1,297 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Paleta azul marino oscuro oficial de U.GG */
+.ugg-body {
+    background-color: #070720;
+}
+
+.ugg-muted {
+    color: #8b8eb3;
+}
+
+.ugg-tag-num {
+    color: #6b6e94;
+}
+
+/* Barra superior de juegos */
+.ugg-games-bar {
+    background-color: #050517;
+    border-bottom: 1px solid #151538;
+}
+
+.ugg-game {
+    color: #6d7094;
+    font-size: 12px;
+}
+
+.ugg-game:hover,
+.ugg-game.active {
+    color: #ffffff;
+}
+
+/* Menú lateral */
+.ugg-sidebar {
+    width: 54px;
+    background-color: #090924;
+    border-right: 1px solid #16163b;
+}
+
+.ugg-side-dl {
+    width: 34px;
+    height: 34px;
+    background-color: #f44343;
+}
+
+.ugg-side-dl:hover {
+    background-color: #dc3535;
+}
+
+.ugg-side-plus {
+    width: 34px;
+    height: 34px;
+    background-color: #161638;
+    border: 1px solid #7d6230;
+    color: #d9b25f;
+}
+
+.ugg-side-link {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #6c6f93;
+}
+
+.ugg-side-link:hover {
+    background-color: #16163b;
+    color: #ffffff;
+}
+
+.ugg-side-link.active {
+    background-color: #3273fa;
+    color: #ffffff;
+}
+
+.ugg-badge-n {
+    top: 2px;
+    right: 1px;
+    background-color: #3273fa;
+    color: #ffffff;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 3px;
+    border-radius: 3px;
+}
+
+.ugg-side-profile {
+    width: 34px;
+    height: 34px;
+    background-color: #3273fa;
+    color: #ffffff;
+}
+
+/* Cabecera superior */
+.ugg-topbar {
+    background-color: #0b0b28;
+    border-bottom: 1px solid #16163b;
+}
+
+.ugg-red-btn {
+    background-color: #f44343;
+    color: #ffffff;
+    border: none;
+}
+
+.ugg-red-btn:hover {
+    background-color: #dc3535;
+    color: #ffffff;
+}
+
+.ugg-top-search {
+    max-width: 440px;
+}
+
+.ugg-search-dark {
+    background-color: #07071c;
+    border: 1px solid #1a1a42;
+}
+
+.ugg-na-pill {
+    background-color: #f5b82e;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.ugg-notif-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #f44343;
+    top: 4px;
+    right: 3px;
+}
+
+.ugg-login-btn {
+    background-color: #3273fa;
+    color: #ffffff;
+    border: none;
+}
+
+.ugg-login-btn:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.ugg-plus-btn {
+    background-color: #101030;
+    color: #ffffff;
+    border: 1px solid #6b562e;
+}
+
+.ugg-plus-word {
+    color: #f5b82e;
+}
+
+/* Sección Home (Yone + U.GG + buscador blanco) */
+.ugg-hero {
+    min-height: 78vh;
+    background:
+        radial-gradient(circle at 60% 30%, rgba(125, 42, 68, 0.35), transparent 55%),
+        linear-gradient(180deg, rgba(11, 11, 40, 0.55) 0%, rgba(7, 7, 32, 0.96) 100%),
+        url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_0.jpg") center 18% / cover no-repeat;
+}
+
+.ugg-dot {
+    font-size: 4.2rem;
+    color: #3273fa;
+}
+
+.ugg-gg {
+    font-size: 3.8rem;
+    letter-spacing: -0.02em;
+}
+
+.ugg-main-search {
+    max-width: 580px;
+}
+
+.ugg-white-bar {
+    background-color: #ffffff;
+}
+
+.ugg-white-input {
+    background-color: #ffffff;
+    color: #1a1d26;
+    font-size: 0.92rem;
+}
+
+.ugg-white-input::placeholder {
+    color: #8c93a3;
+}
+
+.ugg-na-select {
+    background-color: #f5b82e;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 0.25rem 0.45rem;
+    cursor: pointer;
+}
+
+.ugg-search-loupe {
+    color: #5b6275;
+}
+
+/* Sección Leaderboards */
+.ugg-tabs {
+    border-bottom: 1px solid #181840;
+}
+
+.ugg-tabs .nav-link {
+    color: #ffffff;
+    border: none;
+    background: transparent;
+}
+
+.ugg-tabs .nav-link.active {
+    color: #3273fa;
+    background: transparent;
+    border-bottom: 2px solid #3273fa;
+}
+
+.ugg-filter-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+}
+
+.ugg-riot-search {
+    width: 260px;
+}
+
+/* Tarjeta #1 */
+.ugg-top1-card {
+    background:
+        linear-gradient(90deg, rgba(21, 21, 56, 0.96) 48%, rgba(21, 21, 56, 0.35) 100%),
+        url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg") right 20% / cover no-repeat;
+    border: 1px solid #20204d;
+}
+
+.ugg-rank-1 {
+    font-size: 2.3rem;
+    color: #f5b82e;
+}
+
+.ugg-lvl-tag {
+    background-color: #0b0b28;
+    color: #ffffff;
+    border: 1px solid #2d2d63;
+    font-size: 10px;
+}
+
+.ugg-top1-avatar {
+    border: 1px solid #22c55e;
+}
+
+/* Tarjetas #2 a #5 */
+.ugg-player-card {
+    background-color: #131336;
+    border: 1px solid #1e1e4a;
+}
+
+.ugg-rank-2 {
+    color: #3273fa;
+}
+
+.ugg-rank-3 {
+    color: #e87954;
+}
+
+/* Tabla inferior */
+.ugg-table-box {
+    background-color: #0d0d2b;
+    border: 1px solid #191942;
+}
+
+.ugg-table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #ffffff;
+}
+
+.ugg-table thead th {
+    color: #8b8eb3;
+    font-weight: 500;
+    border-bottom: 1px solid #191942;
+}
+
+.ugg-table tbody tr {
+    border-bottom: 1px solid #141438;
+}
+
+.ugg-table tbody tr:last-child {
+    border-bottom: none;
+}

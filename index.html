@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>U.GG - Home &amp; Leaderboards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="ugg-body text-light">
+
+    <!-- Barra superior de juegos (idéntica a la captura) -->
+    <header class="ugg-games-bar d-flex align-items-center gap-4 px-3 py-1 small overflow-x-auto text-nowrap">
+        <a href="#home" class="ugg-game active text-decoration-none d-inline-flex align-items-center gap-2 fw-semibold">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M5 3h5v14h9v4H5V3z" />
+            </svg>
+            League of Legends
+        </a>
+        <a href="#leaderboards" class="ugg-game text-decoration-none d-inline-flex align-items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 5l8 10v4H8L3 12V5zm18 0v7l-5 7h-3v-4l8-10z" />
+            </svg>
+            Valorant
+        </a>
+        <a href="#leaderboards" class="ugg-game text-decoration-none d-inline-flex align-items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 7h4l2 5 2-5h4v10h-3v-6l-2 5H8l-2-5v6H3V7z" />
+            </svg>
+            Rematch
+        </a>
+        <a href="#leaderboards" class="ugg-game text-decoration-none d-inline-flex align-items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="8" />
+                <path d="M12 4v16M4 12h16" />
+            </svg>
+            Deadlock
+        </a>
+        <a href="#leaderboards" class="ugg-game text-decoration-none d-inline-flex align-items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M7 8l2.5 8L12 10l2.5 6L17 8" />
+            </svg>
+            World of Warcraft
+        </a>
+        <a href="#leaderboards" class="ugg-game text-decoration-none d-inline-flex align-items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 3a7 7 0 0 0-7 7c0 2.5 1.3 4.7 3.3 5.9L9 19h6l.7-3.1A7 7 0 0 0 19 10a7 7 0 0 0-7-7zm-2.5 7a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z" />
+            </svg>
+            Helldivers 2
+        </a>
+    </header>
+
+    <div class="d-flex min-vh-100">
+
+        <!-- MENÚ LATERAL IZQUIERDO (Calcado de la captura) -->
+        <aside class="ugg-sidebar d-flex flex-column align-items-center justify-content-between py-2 flex-shrink-0">
+            <div class="d-flex flex-column align-items-center gap-2 w-100">
+
+                <!-- Logo U con barra central azul -->
+                <a href="#home"
+                    class="ugg-logo-btn d-flex align-items-center justify-content-center my-1 text-decoration-none"
+                    title="U.GG">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                        <path d="M5 4h5v16c0 3.3 2.7 6 6 6s6-2.7 6-6V4h5v16c0 6.1-4.9 11-11 11S5 26.1 5 20V4z"
+                            fill="#ffffff" />
+                        <rect x="14" y="4" width="4" height="14" rx="1" fill="#3273fa" />
+                    </svg>
+                </a>
+
+                <!-- Botón rojo de descarga -->
+                <a href="#home" class="ugg-side-dl d-flex align-items-center justify-content-center rounded-2"
+                    title="Download App">
+                    <i class="bi bi-cloud-arrow-down-fill text-white fs-6"></i>
+                </a>
+
+                <!-- Botón cuadrado dorado con + -->
+                <a href="#leaderboards"
+                    class="ugg-side-plus d-flex align-items-center justify-content-center rounded-2 text-decoration-none"
+                    title="Add Summoner">
+                    <i class="bi bi-plus-lg"></i>
+                </a>
+
+                <!-- Lista de iconos del menú lateral -->
+                <a href="#home" class="ugg-side-link text-decoration-none" title="Tier List">
+                    <i class="bi bi-file-text-fill"></i>
+                </a>
+
+                <a href="#leaderboards" class="ugg-side-link position-relative text-decoration-none" title="Champions">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M9.5 17.5L21 6V3h-3L6.5 14.5M11 19l-6-6M8 16l-4 4" />
+                    </svg>
+                    <span class="ugg-badge-n position-absolute">N</span>
+                </a>
+
+                <a href="#leaderboards" class="ugg-side-link position-relative text-decoration-none"
+                    title="ARAM / Modes">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.5 17.5L3 6V3h3l11.5 11.5M9.5 17.5L21 6V3h-3L6.5 14.5" />
+                    </svg>
+                    <span class="ugg-badge-n position-absolute">N</span>
+                </a>
+
+                <a href="#leaderboards" class="ugg-side-link text-decoration-none" title="Monsters / Jungle">
+                    <i class="bi bi-emoji-dizzy-fill"></i>
+                </a>
+
+                <a href="#leaderboards" class="ugg-side-link text-decoration-none" title="Items / Builds">
+                    <i class="bi bi-tag-fill"></i>
+                </a>
+
+                <!-- Icono Trofeo activo (cuadrado azul) -->
+                <a href="#leaderboards" class="ugg-side-link active text-decoration-none" title="Leaderboards">
+                    <i class="bi bi-trophy-fill"></i>
+                </a>
+
+                <a href="#leaderboards" class="ugg-side-link text-decoration-none" title="Videos">
+                    <i class="bi bi-camera-video-fill"></i>
+                </a>
+
+                <a href="#leaderboards" class="ugg-side-link text-decoration-none" title="Patch Notes">
+                    <i class="bi bi-pen-fill"></i>
+                </a>
+
+                <a href="#leaderboards" class="ugg-side-link text-decoration-none" title="Overlay">
+                    <i class="bi bi-display"></i>
+                </a>
+            </div>
+
+            <!-- Icono perfil inferior azul -->
+            <div class="pb-1">
+                <a href="#home"
+                    class="ugg-side-profile d-flex align-items-center justify-content-center rounded-2 text-decoration-none"
+                    title="Account">
+                    <i class="bi bi-person"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="flex-grow-1 d-flex flex-column min-w-0">
+
+            <!-- Navbar superior -->
+            <nav class="navbar navbar-expand-lg ugg-topbar sticky-top px-3 py-2">
+                <div class="container-fluid px-0 gap-2">
+
+                    <a href="#home"
+                        class="btn ugg-red-btn btn-sm fw-semibold px-3 py-2 rounded-2 d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-cloud-arrow-down-fill"></i> Download Now
+                    </a>
+
+                    <!-- Buscador superior -->
+                    <form class="d-none d-md-flex flex-grow-1 mx-lg-4 ugg-top-search" role="search">
+                        <div class="ugg-search-dark d-flex align-items-center w-100 rounded-2 px-3 py-1 gap-2">
+                            <input type="text"
+                                class="form-control form-control-sm bg-transparent border-0 text-light shadow-none px-0"
+                                placeholder="Search Summoner or Champion" aria-label="Search Summoner or Champion">
+                            <span class="ugg-na-pill fw-bold rounded-1 px-2">NA</span>
+                            <button type="submit" class="btn btn-sm bg-transparent border-0 text-light p-1"
+                                aria-label="Search">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#uggTopNav" aria-controls="uggTopNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse flex-grow-0" id="uggTopNav">
+                        <div class="d-flex flex-wrap align-items-center gap-3 mt-2 mt-lg-0">
+                            <button type="button" class="btn btn-sm bg-transparent border-0 text-white p-1"
+                                aria-label="Settings">
+                                <i class="bi bi-gear-fill"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm bg-transparent border-0 text-white p-1"
+                                aria-label="Messages">
+                                <i class="bi bi-chat-square-dots-fill"></i>
+                            </button>
+                            <button type="button"
+                                class="btn btn-sm bg-transparent border-0 text-white position-relative p-1"
+                                aria-label="Notifications">
+                                <i class="bi bi-bell-fill"></i>
+                                <span class="ugg-notif-dot position-absolute rounded-circle"></span>
+                            </button>
+                            <button type="button" class="btn ugg-login-btn btn-sm fw-semibold px-4 py-2 rounded-2">Log
+                                In</button>
+                            <button type="button" class="btn ugg-plus-btn btn-sm fw-semibold px-3 py-2 rounded-2">
+                                Try <span class="ugg-plus-word fw-bold">PLUS</span> Free
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+
+            <!-- SECCIÓN 1: HOME (Fondo Yone + Logo U.GG + Buscador blanco) -->
+            <section id="home" class="ugg-hero d-flex align-items-center justify-content-center px-3 py-5">
+                <div class="container py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-xl-9">
+
+                            <!-- Logo U.GG + Auto-import runes & more -->
+                            <div
+                                class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 mb-4">
+                                <div class="d-flex align-items-center gap-1">
+                                    <!-- U blanca con barra azul central -->
+                                    <svg width="64" height="64" viewBox="0 0 32 32" fill="none">
+                                        <path
+                                            d="M4 3h5.5v16.5c0 3.6 2.9 6.5 6.5 6.5s6.5-2.9 6.5-6.5V3H28v16.5C28 26.4 22.6 31 16 31S4 26.4 4 19.5V3z"
+                                            fill="#ffffff" />
+                                        <rect x="13.8" y="3" width="4.4" height="14.5" rx="1" fill="#3273fa" />
+                                    </svg>
+                                    <span class="ugg-dot fw-bolder lh-1">.</span>
+                                    <span class="ugg-gg fw-bolder text-white lh-1">GG</span>
+                                </div>
+
+                                <div class="text-center text-md-start">
+                                    <h1 class="h5 fw-bold text-white mb-2">Auto-import runes &amp; more</h1>
+                                    <div
+                                        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-3">
+                                        <a href="#leaderboards"
+                                            class="btn ugg-red-btn btn-sm fw-semibold px-3 py-2 rounded-2 d-inline-flex align-items-center gap-2">
+                                            <i class="bi bi-cloud-arrow-down-fill"></i> Download App
+                                        </a>
+                                        <span class="text-white small fw-medium d-inline-flex align-items-center gap-2">
+                                            <!-- Puño de Riot Games -->
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                                <path
+                                                    d="M12.5 2L3 6.2l1.8 10.3 3.2.5-.6-6.2 1.6-.4.8 6.9 3.1.5-.7-7.8 1.6-.4.9 8.5 3.1.5L21 7.5 12.5 2zm-5.2 16.5l11.2 2 .4 1.5-11.2-1.8-.4-1.7z" />
+                                            </svg>
+                                            Riot compliant
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Buscador blanco central -->
+                            <form action="#leaderboards" class="mx-auto ugg-main-search">
+                                <div
+                                    class="ugg-white-bar d-flex align-items-center rounded-1 px-3 py-2 shadow-lg gap-2">
+                                    <input type="text"
+                                        class="form-control ugg-white-input border-0 shadow-none px-1 py-2"
+                                        placeholder="Search Yourself or a Champion"
+                                        aria-label="Search Yourself or a Champion">
+                                    <select class="ugg-na-select fw-bold rounded-1 border-0" aria-label="Region">
+                                        <option value="NA" selected>NA</option>
+                                        <option value="EUW">EUW</option>
+                                        <option value="KR">KR</option>
+                                    </select>
+                                    <button type="submit" class="btn bg-transparent border-0 ugg-search-loupe p-1"
+                                        aria-label="Search">
+                                        <i class="bi bi-search fs-5"></i>
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 2: LEADERBOARDS -->
+            <section id="leaderboards" class="container-fluid px-3 px-md-5 py-4">
+
+                <!-- Pestañas Players / Champions -->
+                <ul class="nav nav-tabs ugg-tabs mb-4 gap-4" id="leaderboardsTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active fw-bold px-1 pb-2" id="players-tab" data-bs-toggle="tab"
+                            data-bs-target="#players-pane" type="button" role="tab">
+                            Players
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link fw-bold px-1 pb-2" id="champions-tab" data-bs-toggle="tab"
+                            data-bs-target="#champions-pane" type="button" role="tab">
+                            Champions
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="leaderboardsTabsContent">
+
+                    <!-- PESTAÑA PLAYERS -->
+                    <div class="tab-pane fade show active" id="players-pane" role="tabpanel">
+
+                        <!-- Filters + NA + Search Riot ID -->
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="text-white small fw-semibold d-inline-flex align-items-center gap-2">
+                                    <i class="bi bi-filter text-secondary"></i> Filters
+                                </span>
+                                <div class="dropdown">
+                                    <button type="button"
+                                        class="btn btn-sm ugg-filter-btn dropdown-toggle fw-bold d-inline-flex align-items-center gap-2 px-2 py-1 rounded-1"
+                                        data-bs-toggle="dropdown">
+                                        <span class="ugg-na-pill fw-bold rounded-1 px-2">NA</span>
+                                        <span>NA</span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item active" href="#leaderboards">NA</a></li>
+                                        <li><a class="dropdown-item" href="#leaderboards">EUW</a></li>
+                                        <li><a class="dropdown-item" href="#leaderboards">KR</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ugg-riot-search">
+                                <div class="ugg-search-dark d-flex align-items-center rounded-1 px-3 py-1">
+                                    <input type="text"
+                                        class="form-control form-control-sm bg-transparent border-0 text-light shadow-none px-0"
+                                        placeholder="Search Riot ID" aria-label="Search Riot ID">
+                                    <button type="button" class="btn btn-sm bg-transparent border-0 text-light p-1"
+                                        aria-label="Search Riot ID">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TARJETA TOP 1: never type #1998 (Con icono de rosa y fondo Caitlyn) -->
+                        <article class="ugg-top1-card rounded-2 p-3 p-md-4 mb-3">
+                            <div class="row align-items-center g-3">
+                                <div class="col-auto px-2 px-md-4">
+                                    <span class="ugg-rank-1 fw-bold">1</span>
+                                </div>
+
+                                <div class="col-auto position-relative text-center">
+                                    <span
+                                        class="ugg-lvl-tag fw-bold rounded-1 px-2 position-absolute top-0 start-50 translate-middle">513</span>
+                                    <img src="https://ddragon.leagueoflegends.com/cdn/14.23.1/img/profileicon/6.png"
+                                        alt="never type" class="rounded-1 ugg-top1-avatar" width="70" height="70">
+                                </div>
+
+                                <div class="col-12 col-md-5">
+                                    <h2 class="h3 fw-bold text-white mb-1">
+                                        never type <span class="ugg-tag-num fs-6 fw-normal ms-1">#1998</span>
+                                    </h2>
+                                    <div class="small d-flex align-items-center gap-2">
+                                        <!-- Emblema Challenger -->
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 2L4 7l3 11 5 4 5-4 3-11-8-5z" fill="#38bdf8" />
+                                            <path d="M12 4l5 3.5-2 7.5-3 2.5-3-2.5-2-7.5L12 4z" fill="#facc15" />
+                                        </svg>
+                                        <span class="text-white fw-semibold">Challenger</span>
+                                        <span class="ugg-muted">4,250 LP</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-auto ms-md-4 small">
+                                    <div class="ugg-muted">588W 374L</div>
+                                    <div class="fw-bold text-white">61% Win Rate</div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- 4 TARJETAS (#2 a #5): 1 por fila en móvil, 2 en tablet, 4 en PC -->
+                        <div class="row g-3 mb-4">
+
+                            <!-- #2 C9 Loki -->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <article
+                                    class="ugg-player-card rounded-2 p-3 h-100 d-flex flex-column justify-content-between gap-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span class="ugg-rank-2 fw-bold fs-4">2</span>
+                                        <img src="https://ddragon.leagueoflegends.com/cdn/14.23.1/img/profileicon/29.png"
+                                            alt="C9 Loki" class="rounded-1" width="46" height="46">
+                                        <div class="min-w-0">
+                                            <h3 class="h6 fw-bold text-white mb-0 text-truncate">C9 Loki</h3>
+                                            <div class="ugg-tag-num small">#kr3</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-end justify-content-between small">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2L4 7l3 11 5 4 5-4 3-11-8-5z" fill="#38bdf8" />
+                                                <path d="M12 4l5 3.5-2 7.5-3 2.5-3-2.5-2-7.5L12 4z" fill="#facc15" />
+                                            </svg>
+                                            <div>
+                                                <div class="text-white fw-semibold">Challenger</div>
+                                                <div class="ugg-muted">3,979 LP</div>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <div class="ugg-muted">358W 247L</div>
+                                            <div class="text-white fw-semibold">59% Win Rate</div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- #3 PhyMini -->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <article
+                                    class="ugg-player-card rounded-2 p-3 h-100 d-flex flex-column justify-content-between gap-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span class="ugg-rank-3 fw-bold fs-4">3</span>
+                                        <img src="https://ddragon.leagueoflegends.com/cdn/14.23.1/img/profileicon/4568.png"
+                                            alt="PhyMini" class="rounded-1" width="46" height="46">
+                                        <div class="min-w-0">
+                                            <h3 class="h6 fw-bold text-white mb-0 text-truncate">PhyMini</h3>
+                                            <div class="ugg-tag-num small">#NA1</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-end justify-content-between small">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2L4 7l3 11 5 4 5-4 3-11-8-5z" fill="#38bdf8" />
+                                                <path d="M12 4l5 3.5-2 7.5-3 2.5-3-2.5-2-7.5L12 4z" fill="#facc15" />
+                                            </svg>
+                                            <div>
+                                                <div class="text-white fw-semibold">Challenger</div>
+                                                <div class="ugg-muted">3,511 LP</div>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <div class="ugg-muted">540W 437L</div>
+                                            <div class="text-white fw-semibold">55% Win Rate</div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- #4 Davemon -->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <article
+                                    class="ugg-player-card rounded-2 p-3 h-100 d-flex flex-column justify-content-between gap-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span class="text-white fw-bold fs-4">4</span>
+                                        <img src="https://ddragon.leagueoflegends.com/cdn/14.23.1/img/profileicon/502.png"
+                                            alt="Davemon" class="rounded-1" width="46" height="46">
+                                        <div class="min-w-0">
+                                            <h3 class="h6 fw-bold text-white mb-0 text-truncate">Davemon</h3>
+                                            <div class="ugg-tag-num small">#NA1</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-end justify-content-between small">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2L4 7l3 11 5 4 5-4 3-11-8-5z" fill="#38bdf8" />
+                                                <path d="M12 4l5 3.5-2 7.5-3 2.5-3-2.5-2-7.5L12 4z" fill="#facc15" />
+                                            </svg>
+                                            <div>
+                                                <div class="text-white fw-semibold">Challenger</div>
+                                                <div class="ugg-muted">3,489 LP</div>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <div class="ugg-muted">721W 559L</div>
+                                            <div class="text-white fw-semibold">56% Win Rate</div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- #5 Zven (Con el mismo avatar de la rosa roja que en la captura) -->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <article
+                                    class="ugg-player-card rounded-2 p-3 h-100 d-flex flex-column justify-content-between gap-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span class="text-white fw-bold fs-4">5</span>
+                                        <img src="https://ddragon.leagueoflegends.com/cdn/14.23.1/img/profileicon/6.png"
+                                            alt="Zven" class="rounded-1" width="46" height="46">
+                                        <div class="min-w-0">
+                                            <h3 class="h6 fw-bold text-white mb-0 text-truncate">Zven</h3>
+                                            <div class="ugg-tag-num small">#S16XD</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-end justify-content-between small">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2L4 7l3 11 5 4 5-4 3-11-8-5z" fill="#38bdf8" />
+                                                <path d="M12 4l5 3.5-2 7.5-3 2.5-3-2.5-2-7.5L12 4z" fill="#facc15" />
+                                            </svg>
+                                            <div>
+                                                <div class="text-white fw-semibold">Challenger</div>
+                                                <div class="ugg-muted">3,477 LP</div>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <div class="ugg-muted">867W 719L</div>
+                                            <div class="text-white fw-semibold">55% Win Rate</div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </div>
+
+                        <!-- TABLA DE CLASIFICACIÓN (Rank 6 y 7 como en la captura) -->
+                        <div class="table-responsive rounded-2 ugg-table-box">
+                            <table class="table table-borderless align-middle mb-0 small ugg-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="py-3 text-center">Rank</th>
+                                        <th scope="col" class="py-3 text-center">Summoner</th>
+                                        <th scope="col" class="py-3 text-center">Region</th>
+                                        <th scope="col" class="py-3 text-center">Tier</th>
+                                        <th scope="col" class="py-3 text-center">LP</th>
+                                        <th scope="col" class="py-3 text-center">Win Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-3 text-center fw-semibold text-white">6</td>
+                                        <td class="py-3">
+                                            <div class="d-flex align-items-center justify-content-center gap-2">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/14.23.1/img/profileicon/1114.png"
+                                                    alt="THANOS" class="rounded-1" width="32" height="32">
+                                                <span class="fw-semibold text-white">＋THANOS＋</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 text-center text-white">NA</td>
+                                        <td class="py-3 text-center">
+                                            <span class="d-inline-flex align-items-center gap-2 text-white fw-semibold">
+                                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M12 2L4 7l3 11 5 4 5-4 3-11-8-5z" fill="#38bdf8" />
+                                                    <path d="M12 4l5 3.5-2 7.5-3 2.5-3-2.5-2-7.5L12 4z"
+                                                        fill="#facc15" />
+                                                </svg>
+                                                Challenger
+                                            </span>
+                                        </td>
+                                        <td class="py-3 text-center text-white">3,448 LP</td>
+                                        <td class="py-3 text-center">
+                                            <span class="fw-bold text-white">55%</span>
+                                            <span class="ugg-muted ms-2">503W 416L</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 text-center fw-semibold text-white">7</td>
+                                        <td class="py-3">
+                                            <div class="d-flex align-items-center justify-content-center gap-2">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/14.23.1/img/profileicon/3552.png"
+                                                    alt="NAgurin" class="rounded-1" width="32" height="32">
+                                                <span class="fw-semibold text-white">NAgurin</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 text-center text-white">NA</td>
+                                        <td class="py-3 text-center">
+                                            <span class="d-inline-flex align-items-center gap-2 text-white fw-semibold">
+                                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M12 2L4 7l3 11 5 4 5-4 3-11-8-5z" fill="#38bdf8" />
+                                                    <path d="M12 4l5 3.5-2 7.5-3 2.5-3-2.5-2-7.5L12 4z"
+                                                        fill="#facc15" />
+                                                </svg>
+                                                Challenger
+                                            </span>
+                                        </td>
+                                        <td class="py-3 text-center text-white">3,437 LP</td>
+                                        <td class="py-3 text-center">
+                                            <span class="fw-bold text-white">58%</span>
+                                            <span class="ugg-muted ms-2">311W 222L</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- PESTAÑA CHAMPIONS -->
+                    <div class="tab-pane fade" id="champions-pane" role="tabpanel">
+                        <div class="ugg-player-card rounded-2 p-4 ugg-muted">
+                            Champions leaderboard view.
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer class="ugg-games-bar ugg-muted text-center py-3 small mt-auto">
+                &copy; Copyright 2026 | Creat per Paula Val López
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
